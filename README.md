@@ -26,12 +26,13 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Install MySQL and setup username and password
 - Install Miscrosoft Visual C++ 2009 Redistributable Package
 - Configure permissions and Install osTicket
+- Installation Files: https://drive.google.com/drive/u/0/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6
 
 <h2>Installation Steps</h2>
 
-<p>
+
 1. After creating the virtual machine (VM), copy the public IP address from Azure.
-</p>
+
 
 <p>
 <img src="https://imgur.com/ePjRQJk.png" height="80%" width="80%" />
@@ -63,6 +64,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <p>
 <img src="https://imgur.com/IY6zhCw.png" height="40%" width="40%" /> <img src="https://imgur.com/WjyZoUv.png" height="40%" width="40%" />
 </p>
+
 <p>
 NOTE: To verify that IIS was successfully installed, enter 127.0.0.1 on the browser. It should load the screen below.
 </p>
@@ -72,36 +74,35 @@ NOTE: To verify that IIS was successfully installed, enter 127.0.0.1 on the brow
 <p>
 <img src="https://imgur.com/dsXL6XK.png" height="80%" width="80%"/>
 </p>
-<p>
+
 5. Download the PHP Manager for IIS from the installation files. Run the installer. On the pop-up screen, select Next>I agree>Next>Close.
 
-</br>
+
 
 6. Download and install the Rewrite Module. On the prompt agree to the user terms, select Install>Finish.
 
-</br>
+
 
 7. Create a folder in Windows Drive C called PHP.
+</p>
 
-</br>
 
 8. Download PHP 7.3.8 the Installation Files, and unzip the contents into C:\PHP
 
-</p>
+
 
 <p>
 <img src="https://imgur.com/gOQJKly.png" height="50%" width="50%"/>
 </p>
-<p>
+
+
 9. Download and install the VC_redist.x86.exe from the installation files. On the prompt agree to the user terms, select Install>Finish.
 
-  </br>
-  
+
 10. Download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi) On the prompt select Next then agree to the license agreement. Select Next>Standard Configuration>Next. Make the root password Password1 then select Next>Execute>Finish. 
 
 Note the username is root.
 
-</p>
 
 <p>
 <img src="https://imgur.com/KuWeMbf.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
@@ -109,18 +110,18 @@ Note the username is root.
 
 </br>
 
-<p>
+
 11. From the start menu, search for IIS, right-click on it then select run as administrator. Open PHP manager then on the popup screen, select Register new PHP version. From the PHP folder you created, select the php-cgi file then select open. Next, click on Restart on the right side of the screen under actions.
-</p>
+
 
 <p>
 <img src="https://imgur.com/YhhuegS.png" height="60%" width="60%"/> <img src="https://imgur.com/7b4Vevd.png" height="35%" width="35%" />
 </p>
+
 <p>
 12. Download osTicket v1.15.8 from the Installation Files Folder. Extract the files then go to Windows C Drive>inetpub>wwwroot then copy the uploads folder to the root folder in inetpub. Rename this upload folder to "osTicket". Then restart ISS. 
 
 </br>
-
 13. On IIS Manager, under Connections, go to Sites>Default>osTicket. On the right, click “Browse *:80”
 
 </p>
@@ -155,9 +156,55 @@ Right click ost-config.php then go to properties. Select Security then Advance, 
 </p>
 
 <p>
-16. Next select Add>Principal then enter "everyone" in the textbox and select Check Names. Ensure all the checkboxes under Basic permissions are selected then click Apply>Ok.
+16. Next select Add>Principal then enter <strong>everyone</strong> in the textbox and select Check Names. Ensure all the checkboxes under Basic permissions are selected then click Apply>Ok.
 </p>
 
 <p>
-<img src="https://imgur.com/7bLYoQa.png" height="50%" width="50%" /> <img src="https://imgur.com/OC4enCG.png" height="50%" width="50%" />
+<img src="https://imgur.com/7bLYoQa.png" height="50%" width="50%" /> <img src="https://imgur.com/OC4enCG.png" height="40%" width="40%" />
+</p>
+
+<p>
+17. From the Installation files, download and install Heidi SQL then run the program. Select New to create a session, enter the username as <strong>root</strong> and the password <strong>Password1</strong>. Next select Open.
+</p>
+
+<p>
+<img src="https://imgur.com/zIVHa4q.png" height="50%" width="50%" /> 
+</p>
+
+</br>
+
+<p>
+18. Right-click "Unnamed" to the left, select Create New>Databas, then name the new database osTicket.
+</p>
+
+<p>
+<img src="https://imgur.com/dy5JlWn.png" height="50%" width="50%" /> <img src="https://imgur.com/lVyg9ha.png" height="35%" width="35%" /> 
+</p>
+
+<p>
+19. Go to Windsows C Drive>inetpub>wwwroot>osTicket and delete the setup folder. Then set back permissions for the ost-config.php file to read only.
+</p>
+
+<p>
+20.Open osTicket in the browser, click continue, then fill out the required information. Under the MySQL Database settings, enter the username and password created in Heidi in step 17. Click Continue on the osTicket browser page.
+</p>
+
+<p>
+<img src="https://imgur.com/gWTPO84.png" height="50%" width="50%" /> 
+</p>
+
+<p>
+osTicket has been successfully installed.
+</p>
+
+<p>
+<img src="https://imgur.com/ZtQUfgO.png" height="50%" width="50%" /> 
+</p>
+
+<p>
+You are now able to login with the username and password you created under Admin User.
+</p>
+
+<p>
+<img src="https://imgur.com/2K7o3tn.png" height="50%" width="50%" /> 
 </p>
