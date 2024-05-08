@@ -22,7 +22,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Create Resource Group
 - Create Virtual Machine
 - Enable IIS
-- Install Web PLatform Installer
+- Install Web Platform Installer
 - Install MySQL and setup username and password
 - Install Miscrosoft Visual C++ 2009 Redistributable Package
 - Configure permissions and Install osTicket
