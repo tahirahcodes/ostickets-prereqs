@@ -174,7 +174,7 @@ Right click ost-config.php then go to properties. Select Security then Advance, 
 </br>
 
 <p>
-18. Right-click "Unnamed" to the left, select Create New>Databas, then name the new database osTicket.
+18. Right-click "Unnamed" to the left, select Create New>Database, then name the new database osTicket.
 </p>
 
 <p>
